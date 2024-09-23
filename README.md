@@ -18,7 +18,8 @@
 ## Introduction
 
 Turing App is a cutting-edge chat application inspired by Omegle, offering users the unique experience of conversing either with a human or an advanced Large Language Model (LLM). With a seamless Firebase backend, Turing App ensures real-time communication and scalability. The app features both dark and light themes, a modern structure utilizing hooks, re-style components, and comprehensive unit testing to guarantee reliability and performance.
-(LLM cloud function is disabled for trashlabs test)
+
+(LLM cloud function is disabled for trashlabs test interview)
 
 ## Features
 
@@ -44,10 +45,10 @@ https://github.com/user-attachments/assets/e584f065-9db9-4ebf-b414-b265f8578150
 
 Ensure you have the following installed on your machine:
 
-- [Node.js](https://nodejs.org/) (v14 or later)
+- [Node.js](https://nodejs.org/) (v18 or later)
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
-- [Firebase CLI](https://firebase.google.com/docs/cli) (optional, for deployment)
-- 
+- [Firebase CLI](https://firebase.google.com/docs/cli) (run cloud functions locally)
+
 ### Installation
 1. **Clone the repository:**
    ```bash
