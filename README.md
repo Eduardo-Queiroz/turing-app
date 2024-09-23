@@ -38,6 +38,45 @@ Turing App is a cutting-edge chat application inspired by Omegle, offering users
 
 https://github.com/user-attachments/assets/e584f065-9db9-4ebf-b414-b265f8578150
 
+## Trade-offs
+
+In this project, we faced several challenges and made strategic choices to achieve our goals within the existing constraints. Below, we detail the main trade-offs:
+
+### Challenges
+
+1. **Scope Limitation:** 
+   - Demonstrating proficiency in system design with a limited number of screens.
+   - Extremely short development timeframe (2.5 days).
+
+### Strategic Solutions
+
+1. **Development Optimization:**
+   - Utilization of a pre-built chat component, with customization of functionalities.
+   - Implementation of dark mode to demonstrate proficiency in design.
+
+### Design and Functionality Choices
+
+To maximize the demonstration of system design skills within the limitations, we focused on the following key functionalities:
+
+1. **Unread notifications**
+   - Implementation of a system for counting and displaying unread messages.
+
+2. **Real-time chat**
+   - Utilization of technologies to ensure instant message updates.
+
+3. **Haptic feedback**
+   - Addition of tactile responses to enhance user experience.
+
+4. **User storage**
+   - Implementation of an efficient system to manage user data.
+
+5. **Cached images for avatars**
+   - Optimization of loading and display of user avatars.
+
+6. **Dark theme**
+   - Demonstration of proficiency with design tokens through the implementation of a complete dark mode.
+
+These choices allowed us to demonstrate competencies in system design and UX/UI, even with the project's time and scope limitations.
 
 ## Getting Started
 
