@@ -36,25 +36,28 @@ export const ChatComponent = ({ ...chatProps }: ChatComponentProps) => {
     },
   };
 
-  return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={{ flex: 1 }}
-    >
-      <Chat
-        theme={chatTheme}
-        emptyState={() => <></>}
-        enableAnimation={true}
-        renderBubble={ChatBubbleComponent}
-        customBottomComponent={() => (
-          <ChatTextInputComponent
-            placeholder="Message"
-            onSend={chatProps.onSendPress}
-            onAttachmentPress={chatProps.onAttachmentPress}
-          />
-        )}
-        {...chatProps}
-      />
-    </KeyboardAvoidingView>
+  const chatComponent = () => (
+    <Chat
+      theme={chatTheme}
+      emptyState={() => <></>}
+      renderBubble={ChatBubbleComponent}
+      customBottomComponent={() => (
+        <ChatTextInputComponent
+          placeholder="Message"
+          onSend={chatProps.onSendPress}
+          onAttachmentPress={chatProps.onAttachmentPress}
+        />
+      )}
+      {...chatProps}
+    />
   );
+
+  if (Platform.OS === "ios") {
+    return (
+      <KeyboardAvoidingView behavior={"padding"} style={{ flex: 1 }}>
+        {chatComponent()}
+      </KeyboardAvoidingView>
+    );
+  }
+  return chatComponent();
 };
