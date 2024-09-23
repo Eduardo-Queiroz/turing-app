@@ -36,7 +36,8 @@ Turing App is a cutting-edge chat application inspired by Omegle, offering users
 
 ### Videos
 
-https://github.com/user-attachments/assets/e584f065-9db9-4ebf-b414-b265f8578150
+https://github.com/user-attachments/assets/307af192-5dd7-44f0-acd1-a3952b4856c6
+
 
 ## Trade-offs
 
