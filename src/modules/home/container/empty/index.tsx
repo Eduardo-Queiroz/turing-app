@@ -7,7 +7,7 @@ export const HomeEmptyContainer = () => {
     <BoxCore flex={1} padding="m" alignItems="center" marginTop="xxl">
       <AnimatedIcon source={EmptyAnimation} variant="medium" />
       <TextCore variant="subtitle" color="secondary" textAlign="center">
-        Add a room in the edit icon near to top left corner
+        Add a room in the edit icon near to top right corner
       </TextCore>
     </BoxCore>
   );

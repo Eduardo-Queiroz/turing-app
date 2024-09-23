@@ -71,7 +71,7 @@ describe("useCamera Hook", () => {
       capturedPicture.width / 2,
       capturedPicture.height / 2,
       "JPEG",
-      60
+      30
     );
 
     expect(FileSystem.readAsStringAsync).toHaveBeenCalledWith(
@@ -115,7 +115,7 @@ describe("useCamera Hook", () => {
     expect(ImagePicker.launchImageLibraryAsync).toHaveBeenCalledWith({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       aspect: [4, 3],
-      quality: 0.6,
+      quality: 0.2,
     });
 
     expect(FileSystem.readAsStringAsync).toHaveBeenCalledWith(
