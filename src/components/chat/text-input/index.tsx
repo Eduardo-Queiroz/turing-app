@@ -49,6 +49,7 @@ export const ChatTextInputComponent: React.FC<ChatTextInputComponentProps> = ({
         </BoxCore>
         <BoxCore flex={1}>
           <TextInput
+            autoFocus
             underlineColorAndroid="transparent"
             cursorColor={colors.secondary}
             placeholderTextColor={colors.neutral50}
