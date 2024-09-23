@@ -71,7 +71,7 @@ Ensure you have the following installed on your machine:
 1. Open an Android emulator or connect a physical device.
 2. Run the command:
    ```bash
-   yarn run:android
+   yarn android
    ```
 
 ### For iOS:
@@ -81,7 +81,7 @@ Ensure you have the following installed on your machine:
 
 Alternatively, you can run the command:
 ```bash
-yarn run:ios
+yarn ios
 ```
 
 ## Support
