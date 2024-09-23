@@ -18,6 +18,7 @@
 ## Introduction
 
 Turing App is a cutting-edge chat application inspired by Omegle, offering users the unique experience of conversing either with a human or an advanced Large Language Model (LLM). With a seamless Firebase backend, Turing App ensures real-time communication and scalability. The app features both dark and light themes, a modern structure utilizing hooks, re-style components, and comprehensive unit testing to guarantee reliability and performance.
+(LLM cloud function is disabled for trashlabs test)
 
 ## Features
 
