@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1080108841628",
+    "project_id": "message-app-d2458",
+    "storage_bucket": "message-app-d2458.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080108841628:android:d5c64c6cfeafe91e498b59",
+        "android_client_info": {
+          "package_name": "com.turing.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6hudsftfWYzyoGL_nKI_VjaRmib3wDi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
