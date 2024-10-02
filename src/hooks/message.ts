@@ -74,7 +74,8 @@ export const useMessage = (room: Room) => {
     try {
       await firestore()
         .collection(`${ROOMS_COLLECTION_NAME}/${room.id}/${MESSAGES_COLLECTION_NAME}`)
-        .add({
+        .doc(message.id)
+        .set({
           ...message,
           authorId: user.id,
           createdAt: firestore.FieldValue.serverTimestamp(),
@@ -96,13 +97,51 @@ export const useMessage = (room: Room) => {
           unreadUserId: room.otherUser.id
         })
     } catch (e) {
-      console.log(e)
       Toast.show({
         type: 'error',
         text1: 'Oops...',
         text2: 'Happen a error while you send a message'
       });
     }
+  }
+
+  const handleLikeMessage = async (message: MessageType.Any) => {
+    if (!user) return
+    try {
+      const metadata = {
+        ...message.metadata,
+        liked: true
+      }
+
+      console.log(message.id)
+
+      await firestore()
+        .collection(`${ROOMS_COLLECTION_NAME}/${room.id}/${MESSAGES_COLLECTION_NAME}`)
+        .doc(message.id)
+        .update({
+          metadata
+        })
+
+      const newMessages = messages.map(item => item.id == message.id ? { ...message, metadata } : item)
+
+      setMessages(newMessages);
+
+      firestore()
+        .collection(ROOMS_COLLECTION_NAME)
+        .doc(room.id)
+        .update({
+          lastMessage: (message as any)?.text || "Liked your message",
+          unreadUserId: room.otherUser.id
+        })
+    } catch (e) {
+      console.log(e)
+      Toast.show({
+        type: 'error',
+        text1: 'Oops...',
+        text2: 'Happen a error while you liked a message'
+      });
+    }
+
   }
 
   const handleSendText = (message: MessageType.PartialText) => {
@@ -134,6 +173,7 @@ export const useMessage = (room: Room) => {
     otherUserName,
     messages,
     handleSendText,
-    handleSendImage
+    handleSendImage,
+    handleLikeMessage
   }
 }

@@ -21,6 +21,7 @@ export const MessageScreen = () => {
     handleSendImage,
     otherUserName,
     flyerhqUser,
+    handleLikeMessage,
   } = useMessage(params?.room);
 
   const handleImageSelection = () => {
@@ -47,6 +48,7 @@ export const MessageScreen = () => {
       <ChatComponent
         messages={messages}
         onSendPress={handleSendText}
+        onLikeMessage={handleLikeMessage}
         user={flyerhqUser}
         onAttachmentPress={handleImageSelection}
       />
